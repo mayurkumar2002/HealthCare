@@ -16,31 +16,31 @@ const seedPatients = [
         name: 'Mayur Kumar',
         date: "2023-04-14T00:00:00.000Z",
         age: 21,
-        patient_id: '2021UGCS065'
+        patient_id: '1201'
     },
     {
         name: 'Krish Kumar',
         date: "2023-04-14T00:00:00.000Z",
         age: 21,
-        patient_id: '2021UGCS002'
+        patient_id: '1202'
     },
     {
         name: 'Yash Garg',
         date: "2023-04-14T00:00:00.000Z",
         age: 21,
-        patient_id: '2021UGCS048'
+        patient_id: '1203'
     },
     {
         name: 'Shivam Kumar',
         date: "2023-04-14T00:00:00.000Z",
         age: 21,
-        patient_id: '2021UGCS072'
+        patient_id: '1204'
     },
     {
         name: 'Ritesh Kumar',
         date: "2023-04-14T00:00:00.000Z",
         age: 21,
-        patient_id: '2021UGCS061'
+        patient_id: '1205'
     },
 ]
 

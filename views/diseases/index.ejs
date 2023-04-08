@@ -3,22 +3,27 @@
         <div class="col-md-6 offset-md-3">
             <h1 class=" ml-3 mb-3">Diseases</h1>
             <div class="card" style="width: 24rem; background-color: #70e000">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpotWxtMG9mld21UAR4v5z-8A8vZodVzEZsw&usqp=CAU" class="card-img-top" alt="...">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpotWxtMG9mld21UAR4v5z-8A8vZodVzEZsw&usqp=CAU"
+                    class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">List of diseases occured to patients</h5>
-                  <p class="card-text">Your illness does not define you. Your strength and courage does.</p>
+                    <h5 class="card-title">List of diseases occured to patients</h5>
+                    <p class="card-text">Your illness does not define you. Your strength and courage does.</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <% for(let disease of diseases){ %>
-                        <li class="list-group-item list-group-item-action" style="background-color: #cde000"><h5><a class="link-dark text-decoration-none" href="/diseases/<%= disease._id %>"><%= disease.name %></a></h5></li>
-                    <% } %>
+                        <li class="list-group-item list-group-item-action" style="background-color: #cde000">
+                            <h5><a class="link-dark text-decoration-none" href="/diseases/<%= disease._id %>">
+                                    <%= disease.name %>
+                                </a></h5>
+                        </li>
+                        <% } %>
                 </ul>
                 <% if(filled){ %>
                     <div class="ml-2 my-2">
                         <a class="btn btn-success btn-sm" href="/diseases/new">New Disease</a>
                     </div>
                     <% } %>
-              </div>
-              <a class="btn btn-success my-3 px-3" href="/patients">Back</a>
+            </div>
+            <a class="btn btn-success my-3 px-3" href="/patients">Back</a>
         </div>
     </div>
