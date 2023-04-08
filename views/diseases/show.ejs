@@ -1,16 +1,20 @@
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2966/2966327.png">
 <% layout('layouts/boilerplate')%>
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <div class="card mb-3">
                 <div class="card-body">
-                    <h4 class="card-title">Disease Name: <%= disease.name %></h4>
+                    <h4 class="card-title">Disease Name: <%= disease.name %>
+                    </h4>
                     <hr>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item "><strong>Doctor name </strong> <%= disease.doctor_name %></li>
+                        <li class="list-group-item "><strong>Doctor name </strong>
+                            <%= disease.doctor_name %>
+                        </li>
                     </ul>
                 </div>
             </div>
-            
+
             <form action="/diseases/<%=disease._id %>?_method=DELETE" method="POST">
                 <button class="btn btn-danger">Delete</button>
             </form>
