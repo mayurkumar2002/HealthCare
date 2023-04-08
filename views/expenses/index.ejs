@@ -1,0 +1,26 @@
+<% layout('layouts/boilerplate') %>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1>Result</h1>
+      <div class="card" style="width: 25rem;">
+          <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201506/result_650_061815035802.jpg?VersionId=M_1ieOu9TLZGLOfqQEEbrkYJO49Gbeh_" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= patient.name %></h5>
+            <p class="card-text">Very Much Improvement.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <!-- patient,subExpense,totalFees,percentage -->
+            <% for(let expense in subExpense){ %>
+              <li class="list-group-item"><%= expense %> : <%= subExpense[expense] %></li> 
+            <% } %>
+            <li class="list-group-item"><h5>Total Fees to be Paid (in Rs)= <%= totalFees %></h5></li>
+            <li class="list-group-item"><h5>Percentage Fees (in Rs) = <%= percentage %></h5></li>
+          </ul>
+          
+          <div class="card-body">
+            <a class="btn btn-success" href="/patients/<%= patient._id %>">Back To patient</a>
+          </div>
+        </div>
+      
+    </div>
+  </div>

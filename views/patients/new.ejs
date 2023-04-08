@@ -1,0 +1,31 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Add a Patient</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/patients" method="POST">
+                <div class="mb-3">
+                    <label class="form-label" for="name">Patient Name</label>
+                    <input class="form-control" type="text" name="name" placeholder="Patient name" id="name" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label" for="date">Date</label>
+                    <input class="form-control" type="date" name="date" placeholder="Date" id="date">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="age">Age</label>
+                    <input class="form-control" type="number" name="age" placeholder="Age" id="age" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label" for="patient_id">Patient Id</label>
+                    <input class="form-control" type="text" name="patient_id" placeholder="Patient Id" id="patient_id" required>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Patient</button>
+                </div>
+            </form>
+            <a href="/patients" class="btn btn-success">All Patients</a>
+        </div>
+    </div>
