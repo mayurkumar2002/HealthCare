@@ -1,26 +1,34 @@
 <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2966/2966327.png">
 <% layout('layouts/boilerplate')%>
-    <div class="row">
-        <h1 class="text-center mb-3"><%= patient.name %></h1>
+    <div class="row my-5">
+        <h1 class="text-center mb-3">
+            <%= patient.name %>
+        </h1>
         <div class="col-md-6 offset-md-3">
             <div class="card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title">Name: <%= patient.name %></h5>
+                    <h5 class="card-title">Name: <%= patient.name %>
+                    </h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item "><strong>Age: </strong> <%= patient.age %></li>
-                        <li class="list-group-item"><strong>Date: </strong><%= patient.date %></li>
+                        <li class="list-group-item "><strong>Age: </strong>
+                            <%= patient.age %>
+                        </li>
+                        <li class="list-group-item"><strong>Date: </strong>
+                            <%= patient.date %>
+                        </li>
                         <li class="list-group-item"><strong>Patient Id: <%=patient.patient_id%></strong></li>
                     </ul>
                     <% if(filled){ %>
                         <div class="card-body mt-0">
                             <a class="btn btn-sm btn-success" href="/expenses/<%= patient._id %>">Show Expenses</a>
                         </div>
-                    <% } %>
-                    <% if(!filled){ %>
-                        <div class="card-body mt-0">
-                            <a class="btn btn-sm btn-success" href="/expenses/<%= patient._id %>/new">Add Expenses</a>
-                        </div>
-                    <% } %>
+                        <% } %>
+                            <% if(!filled){ %>
+                                <div class="card-body mt-0">
+                                    <a class="btn btn-sm btn-success" href="/expenses/<%= patient._id %>/new">Add
+                                        Expenses</a>
+                                </div>
+                                <% } %>
                 </div>
             </div>
             <form class="mt-auto mx-2" action="/patients/<%= patient._id %>?_method=DELETE" method="POST">
@@ -29,5 +37,5 @@
             <a class="btn btn-success mt-3 mx-2" href="/patients/<%= patient._id %>/edit">Edit patient</a>
             <a class="btn btn-success mt-3 mx-2" href="/patients">All patients</a>
         </div>
-        
+
     </div>

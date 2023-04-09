@@ -1,6 +1,6 @@
 <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2966/2966327.png">
 <% layout('layouts/boilerplate')%>
-    <div class="row">
+    <div class="row my-5">
         <h1 class="text-center"><b>Add a Patient</b></h1>
         <div class="col-md-6 offset-md-3">
             <form action="/patients" method="POST">
@@ -8,7 +8,7 @@
                     <label class="form-label" for="name">Patient Name</label>
                     <input class="form-control" type="text" name="name" placeholder="Patient name" id="name" required>
                 </div>
-                
+
                 <div class="mb-3">
                     <label class="form-label" for="date">Admit Date</label>
                     <input class="form-control" type="date" name="date" placeholder="Date" id="date">
@@ -18,10 +18,11 @@
                     <label class="form-label" for="age">Age</label>
                     <input class="form-control" type="number" name="age" placeholder="Age" id="age" required>
                 </div>
-                
+
                 <div class="mb-3">
                     <label class="form-label" for="patient_id">Patient Id</label>
-                    <input class="form-control" type="text" name="patient_id" placeholder="Patient Id" id="patient_id" required>
+                    <input class="form-control" type="text" name="patient_id" placeholder="Patient Id" id="patient_id"
+                        required>
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-success">Add Patient</button>
