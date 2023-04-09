@@ -1,9 +1,10 @@
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2966/2966327.png">
 <% layout('layouts/boilerplate')%>
     <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-6 offset-md-3 my-5">
             <h1 class=" ml-3 mb-3">Diseases</h1>
-            <div class="card" style="width: 24rem; background-color: #70e000">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpotWxtMG9mld21UAR4v5z-8A8vZodVzEZsw&usqp=CAU"
+            <div class="card" style="width: 24rem; background-color: #00e02d">
+                <img src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fG1lZGljYWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
                     class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">List of diseases occured to patients</h5>
@@ -11,7 +12,7 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <% for(let disease of diseases){ %>
-                        <li class="list-group-item list-group-item-action" style="background-color: #cde000">
+                        <li class="list-group-item list-group-item-action" style="background-color: #00e0a0">
                             <h5><a class="link-dark text-decoration-none" href="/diseases/<%= disease._id %>">
                                     <%= disease.name %>
                                 </a></h5>
