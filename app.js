@@ -25,6 +25,9 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname,'public')));
 
+app.get('/',async (req,res)=>{ 
+    res.render('home');
+})
 app.get('/patients',async (req,res)=>{
     const patients=await Patient.find({});
     res.render('patients/index',{patients});
